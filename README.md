@@ -60,4 +60,4 @@ ___________________________________________________
   
 ## 🔗 Repositorio del Proyecto
 
-👉 [https://github.com/ricardo852/proyecto-arduino-2.git](ir_al_repositorio)
+👉 [Repositorio](https://github.com/ricardo852/proyecto-arduino-2.git)
