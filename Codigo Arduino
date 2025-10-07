@@ -1,0 +1,54 @@
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd_1(12, 11, 5, 4, 3, 2);
+
+const int pinTMP = A0;
+const int pinMotor = 9;
+const int pinLed = 13;
+
+void setup() {
+  lcd_1.begin(16, 2);
+  pinMode(pinLed, OUTPUT);
+  pinMode(pinMotor, OUTPUT);
+  
+  lcd_1.clear();
+  lcd_1.setCursor(0, 0);
+  lcd_1.print("Iniciando...");
+  delay(1500);
+  lcd_1.clear();
+}
+
+void loop() {
+  int lecturaTMP = analogRead(pinTMP);
+  float voltTMP = (lecturaTMP * 5.0) / 1023.0;
+  float tempC = (voltTMP - 0.5) * 100;
+
+  lcd_1.setCursor(0, 0);
+  lcd_1.print("Temp: ");
+  lcd_1.print(tempC);
+  lcd_1.print("C   ");
+
+  if (tempC <= 10) {
+    digitalWrite(pinMotor, LOW);
+    digitalWrite(pinLed, HIGH);
+    lcd_1.setCursor(0, 1);
+    lcd_1.print("Clima: FRIO    ");
+    delay(500);
+    digitalWrite(pinLed, LOW);
+    delay(500);
+  } 
+  else if (tempC >= 11 && tempC <= 25) {
+    digitalWrite(pinLed, LOW);
+    digitalWrite(pinMotor, LOW);
+    lcd_1.setCursor(0, 1);
+    lcd_1.print("Clima: NORMAL  ");
+  } 
+  else if (tempC >= 26) {
+    digitalWrite(pinLed, HIGH);
+    digitalWrite(pinMotor, HIGH);
+    lcd_1.setCursor(0, 1);
+    lcd_1.print("Clima: CALOR   ");
+  }
+
+  delay(600);
+}
