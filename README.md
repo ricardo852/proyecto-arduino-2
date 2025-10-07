@@ -56,4 +56,8 @@ ___________________________________________________
 
 - **Motor DC:**  
   Positivo → Pin 9 (a través de diodo de protección)  
-  Negativo → GND  
+  Negativo → GND
+  
+## 🔗 Repositorio del Proyecto
+
+👉 [https://github.com/ricardo852/proyecto-arduino-2.git](ir_al_repositorio)
