@@ -58,6 +58,7 @@ ___________________________________________________
   Positivo → Pin 9 (a través de diodo de protección)  
   Negativo → GND
   
-## 🔗 Repositorio del Proyecto
+## 🔗 LINKS
 
-👉 [Repositorio](https://github.com/ricardo852/proyecto-arduino-2.git)
+👉 [Repositorio del Proyecto](https://github.com/ricardo852/proyecto-arduino-2.git)
+👉 [Proyecto en www.tinkercad.com](https://www.tinkercad.com/things/6JzRDGNBoYT-fantabulous-uusam/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard&sharecode=SQAQ_LW0tMQ9RyjyRxUnqa2t2_J71UualNY3RfG1izk)
